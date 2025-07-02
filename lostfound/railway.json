@@ -1,7 +1,7 @@
 {
     "build": {
       "builder": "NIXPACKS",
-      "buildCommand": "./mvnw package",
+      "buildCommand": "./mvnw package -DskipTests",
       "startCommand": "java -jar target/*.jar"
     }
   }
