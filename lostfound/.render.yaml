@@ -1,8 +1,6 @@
 services:
   - type: web
     name: php-app
-    env: docker
-    plan: free
+    env: static
     buildCommand: ""
-    startCommand: "apache2-foreground"
-    dockerfilePath: Dockerfile
+    staticPublishPath: public   # or use "." if your index.php is at root
