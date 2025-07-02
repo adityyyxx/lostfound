@@ -5,3 +5,7 @@ services:
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/lostfound-0.0.1-SNAPSHOT.jar
     plan: free
+    buildFilter:
+    paths:
+    - lostfound/lostfound/**
+
