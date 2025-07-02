@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: lostfound-springboot
+    name: lostfound-app
     env: java
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/lostfound-0.0.1-SNAPSHOT.jar
