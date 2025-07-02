@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: php-app
-    env: static
-    buildCommand: ""
-    staticPublishPath: public   # or use "." if your index.php is at root
+    name: lostfound-springboot
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/lostfound-0.0.1-SNAPSHOT.jar
+    plan: free
