@@ -1,16 +1,7 @@
 {
   "build": {
-    "env": {
-      "JAVA_VERSION": "17"
-    },
-    "command": "./mvnw package"
-  },
-  "start": {
-    "command": "java -jar target/*.jar"
+    "builder": "NIXPACKS",
+    "buildCommand": "./mvnw package -DskipTests",
+    "startCommand": "java -jar target/*.jar"
   }
 }
-
-    buildFilter:
-    paths:
-    - lostfound/lostfound/**
-
