@@ -1,10 +1,15 @@
-services:
-  - type: web
-    name: lostfound-app
-    env: java
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/lostfound-0.0.1-SNAPSHOT.jar
-    plan: free
+{
+  "build": {
+    "env": {
+      "JAVA_VERSION": "17"
+    },
+    "command": "./mvnw package"
+  },
+  "start": {
+    "command": "java -jar target/*.jar"
+  }
+}
+
     buildFilter:
     paths:
     - lostfound/lostfound/**
