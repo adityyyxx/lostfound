@@ -4,8 +4,18 @@ services:
     env: docker
     repo: https://github.com/adityyyxx/lostfound.git
     branch: main
-    dockerfilePath: Dockerfile
+    dockerfilePath: lostfound/Dockerfile
     plan: free
     envVars:
       - key: PORT
-      value: 57014
+        value: 57014
+      - key: DB_HOST
+        value: dpg-d1j57fur433s73fs2dlg-a         # from Render
+      - key: DB_PORT
+        value: 5432
+      - key: DB_NAME
+        value: admin_0ckw
+      - key: DB_USER
+        value: aditya
+      - key: DB_PASSWORD
+        value: gi0a5kUYcK2c3FTYvWPTWL9eQY8dLd4R
