@@ -1,7 +1,11 @@
-{
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "./mvnw package -DskipTests",
-    "startCommand": "java -jar target/*.jar"
-  }
-}
+services:
+  - type: web
+    name: springboot-app
+    runtime: docker
+    repo: https://github.com/adityyyxx/lostfound.git
+    branch: main
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 56421
