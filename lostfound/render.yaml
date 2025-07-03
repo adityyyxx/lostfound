@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lostfound-app
+    runtime: docker
+    repo: https://github.com/adityyyxx/lostfound.git
+    branch: main
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 57014
