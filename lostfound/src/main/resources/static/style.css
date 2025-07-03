@@ -1,148 +1,159 @@
-/* style.css */
+/* Base Styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-    color: #333;
-    padding: 40px;
-    text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  padding: 40px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+form {
+  background: #fff;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all children (including button) */
+}
+
+label {
+  align-self: flex-start;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Centered Submit Button */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center; /* ✅ Ensures button is centered */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+a button {
+  margin: 10px;
+}
+
+/* General Layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* Buttons with animation */
+.actions {
+  margin-top: 30px;
+}
+
+.btn {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  padding: 20px;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
   }
-  
-  h1, h2 {
-    color: #2c3e50;
+
+  .container {
+    padding-top: 20px;
   }
-  
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 12px;
+  }
+
   form {
-    background: #fff;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    text-align: left;
+    padding: 20px;
   }
-  
-  label {
-    display: block;
-    margin: 12px 0 6px;
-    font-weight: 600;
-  }
-  
+
   input[type="text"],
   input[type="date"],
+  input[type="file"],
+  input[type="tel"],
   textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 15px;
   }
-  
-  textarea {
-    resize: vertical;
-    min-height: 80px;
-  }
-  
+
   button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
-  a button {
-    margin: 10px;
+    width: 100%;
   }
 
-
-  /* General Layout */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 50px;
-  }
-  
-  /* Buttons with animation */
-  .actions {
-    margin-top: 30px;
-  }
-  
-  .btn {
-    background: #2ecc71;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    font-size: 18px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: #27ae60;
-    transform: scale(1.05);
-  }
-  
-  /* Footer */
   footer {
-    margin-top: 80px;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    font-size: 12px;
+    padding: 15px;
   }
-  /* Mobile Responsive Styles */
-@media (max-width: 600px) {
-    body {
-      padding: 20px;
-    }
-  
-    .container {
-      padding-top: 20px;
-    }
-  
-    h1 {
-      font-size: 24px;
-    }
-  
-    p {
-      font-size: 16px;
-    }
-  
-    .btn {
-      width: 100%;
-      margin: 10px 0;
-      font-size: 16px;
-      padding: 12px;
-    }
-  
-    form {
-      padding: 20px;
-    }
-  
-    input[type="text"],
-    input[type="date"],
-    textarea,
-    input[type="file"] {
-      font-size: 16px;
-    }
-  
-    footer {
-      font-size: 12px;
-      padding: 15px;
-    }
-  }
-  
-  
+}
