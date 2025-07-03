@@ -8,6 +8,7 @@
 <body>
   <h2>Found Item Form</h2>
   <form action="/submit-found" method="post" enctype="multipart/form-data">
+
     <label>Item Name:</label>
     <input type="text" name="item_name" required>
 
@@ -24,7 +25,8 @@
     <input type="text" name="location">
 
     <label>Contact Info (Phone Number):</label>
-    <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="10-digit number" required>
+    <input type="text" id="contact" name="contact" maxlength="10" placeholder="10-digit phone number" required>
+    <span id="error-msg" style="color:red;"></span>
 
     <label>Upload Image (Optional):</label>
     <input type="file" name="image" accept="image/*">
@@ -33,8 +35,25 @@
   </form>
 
   <script>
-    // Prevent selecting future date
+    // ✅ Prevent future date selection
     document.querySelector('input[name="date_found"]').max = new Date().toISOString().split('T')[0];
+
+    // ✅ Only allow exactly 10-digit phone numbers
+    const contactInput = document.getElementById('contact');
+    const errorMsg = document.getElementById('error-msg');
+
+    contactInput.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, ''); // Remove non-digit characters
+      if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10); // Max 10 digits
+      }
+
+      if (this.value.length < 10) {
+        errorMsg.textContent = "Phone number must be exactly 10 digits.";
+      } else {
+        errorMsg.textContent = "";
+      }
+    });
   </script>
 </body>
 </html>

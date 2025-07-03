@@ -8,6 +8,7 @@
 <body>
   <h2>Lost Item Form</h2>
   <form action="/submit-lost" method="post" enctype="multipart/form-data">
+    
     <label>Item Name:</label>
     <input type="text" name="item_name" required>
 
@@ -18,13 +19,14 @@
     <input type="text" name="category">
 
     <label>Date Lost:</label>
-    <input type="date" name="date_lost" max="<?= date('Y-m-d') ?>" required>
+    <input type="date" name="date_lost" required>
 
     <label>Location (Optional):</label>
     <input type="text" name="location">
 
     <label>Contact Info (Phone Number):</label>
-    <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="10-digit number" required>
+    <input type="text" id="contact" name="contact" maxlength="10" placeholder="10-digit phone number" required>
+    <span id="error-msg" style="color:red;"></span>
 
     <label>Upload Image (Optional):</label>
     <input type="file" name="image" accept="image/*">
@@ -33,8 +35,25 @@
   </form>
 
   <script>
-    // Set max date to today dynamically for all browsers (JS fallback)
+    // ✅ Prevent future dates
     document.querySelector('input[name="date_lost"]').max = new Date().toISOString().split('T')[0];
+
+    // ✅ Real-time digit-only validation
+    const contactInput = document.getElementById('contact');
+    const errorMsg = document.getElementById('error-msg');
+
+    contactInput.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, ''); // allow only digits
+      if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10);
+      }
+
+      if (this.value.length < 10) {
+        errorMsg.textContent = "Phone number must be exactly 10 digits.";
+      } else {
+        errorMsg.textContent = "";
+      }
+    });
   </script>
 </body>
 </html>
