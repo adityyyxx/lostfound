@@ -1,12 +1,12 @@
 services:
   - type: web
     name: springboot-app
-    runtime: docker
+    runtime: java
     repo: https://github.com/adityyyxx/lostfound.git
     branch: main
     plan: free
-    dockerfilePath: lostfound/Dockerfile
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/lostfound-0.0.1-SNAPSHOT.jar"
     envVars:
       - key: PORT
-        value: 56421
-
+        value: 57041
