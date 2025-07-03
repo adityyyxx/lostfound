@@ -5,7 +5,8 @@ services:
     repo: https://github.com/adityyyxx/lostfound.git
     branch: main
     plan: free
-    dockerfilePath: Dockerfile
+    dockerfilePath: lostfound/Dockerfile
     envVars:
       - key: PORT
         value: 56421
+
