@@ -4,7 +4,6 @@
   <title>Report Found Item</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
   <h2>Found Item Form</h2>
@@ -19,18 +18,23 @@
     <input type="text" name="category">
 
     <label>Date Found:</label>
-    <input type="date" name="date_found">
+    <input type="date" name="date_found" required>
 
     <label>Location (Optional):</label>
     <input type="text" name="location">
 
-    <label>Contact Info:</label>
-    <input type="text" name="contact">
+    <label>Contact Info (Phone Number):</label>
+    <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="10-digit number" required>
 
     <label>Upload Image (Optional):</label>
     <input type="file" name="image" accept="image/*">
 
     <button type="submit">Submit</button>
   </form>
+
+  <script>
+    // Prevent selecting future date
+    document.querySelector('input[name="date_found"]').max = new Date().toISOString().split('T')[0];
+  </script>
 </body>
 </html>
