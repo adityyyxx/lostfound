@@ -28,8 +28,8 @@
     <input type="text" id="contact" name="contact" maxlength="10" placeholder="10-digit phone number" required>
     <span id="error-msg" style="color:red;"></span>
 
-    <label>Upload Image (Optional):</label>
-    <input type="file" name="image" accept="image/*">
+    <label>Upload Image <strong>(Required)</strong>:</label>
+    <input type="file" name="image" accept="image/*" required>
 
     <button type="submit">Submit</button>
   </form>
@@ -43,9 +43,9 @@
     const errorMsg = document.getElementById('error-msg');
 
     contactInput.addEventListener('input', function () {
-      this.value = this.value.replace(/\D/g, ''); // Remove non-digit characters
+      this.value = this.value.replace(/\D/g, '');
       if (this.value.length > 10) {
-        this.value = this.value.slice(0, 10); // Max 10 digits
+        this.value = this.value.slice(0, 10);
       }
 
       if (this.value.length < 10) {
