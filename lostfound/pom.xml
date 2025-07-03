@@ -19,7 +19,7 @@
     <description>Project for Spring Boot</description>
 
     <properties>
-        <java.version>22</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
