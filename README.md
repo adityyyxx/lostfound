@@ -1,3 +1,11 @@
+## **PLEASE FOR FEW MINUTES AFTER CLCIKING THE LINK**
+
+
+
+
+
+
+
 # 🧭 Lost & Found Community Platform
 
 A full-stack **Lost & Found Web Application** that helps users report and recover lost or found items with the help of **AI-based smart matching**.
