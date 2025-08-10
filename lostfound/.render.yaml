@@ -10,12 +10,12 @@ services:
       - key: PORT
         value: 57014
       - key: DB_HOST
-        value: dpg-d1j57fur433s73fs2dlg-a         # from Render
+        value: dpg-d2bvhovdiees73f5c8qg-a.oregon-postgres.render.com
       - key: DB_PORT
         value: 5432
       - key: DB_NAME
-        value: admin_0ckw
+        value: admin_d06t
       - key: DB_USER
         value: aditya
       - key: DB_PASSWORD
-        value: gi0a5kUYcK2c3FTYvWPTWL9eQY8dLd4R
+        value: 8fS8zPr7Wg15RxAqULL9EsOWdcW2RvZ0
