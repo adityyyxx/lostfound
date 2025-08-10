@@ -11,11 +11,10 @@
 A full-stack **Lost & Found Web Application** that helps users report and recover lost or found items with the help of **AI-based smart matching**.
 
 Built with:
-- 🧠 AI Text Similarity (Python)
 - ☕ Spring Boot (Java)
 - 🗄️ MySQL Database
 - 🌐 Thymeleaf Templates
-- 📤 REST APIs for communication between backend and AI service
+- 📤 REST APIs for communication between backend..
 
 ---
 
@@ -37,5 +36,4 @@ Built with:
 | Backend        | Spring Boot, Java, REST API   |
 | Frontend       | Thymeleaf, HTML, CSS, JS      |
 | Database       | MySQL                         |
-| AI Component   | Python (text similarity)      |
-| Deployment     | Render / Railway              |
+| Deployment     | Render                        |
